@@ -1,0 +1,16 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Setup spotify sensors",
+                "data": {
+                    "username": "Spotify User"
+                }
+            }
+        },
+        "error": {
+            "no_users": "There are no setup spotify users (without a sensor)",
+            "invalid_user": "This username is not setup in home-assistant"
+        }
+    }
+}

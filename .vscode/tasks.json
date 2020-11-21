@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "mkdir -p .config; podman run -it --rm --security-opt label=disable -e TZ=Europe/Berlin -v ./.config:/config:Z -v ./custom_components:/config/custom_components:Z -p 8123:8123 --name ha-spotify-sensor homeassistant/home-assistant:stable",
+            "problemMatcher": []
+        },
+        {
+            "label": "link",
+            "type": "shell",
+            "command": "podman exec -t ha-spotify-sensor /bin/bash -c \"ln -s /config/custom_components/spotify-sensor /usr/src/spotify-sensor\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "shell",
+            "type": "shell",
+            "command": "podman exec -it ha-spotify-sensor /bin/bash",
+            "problemMatcher": []
+        }
+    ]
+}

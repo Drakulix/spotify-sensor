@@ -1,0 +1,8 @@
+{
+  "domain": "spotify-sensor",
+  "name": "Spotify Sensor",
+  "documentation": "https://github.com/drakulix/spotify-sensor",
+  "config_flow": true,
+  "codeowners": ["@drakulix"],
+  "after_dependencies": ["spotify"]
+}
